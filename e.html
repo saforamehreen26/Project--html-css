@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Interface</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #d480be;
+    }
+
+    .search-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #67c2d2;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .dropdown {
+      position: relative;
+      width: 200px;
+    }
+    .dropdown select{
+      border:none;
+      background-color:aliceblue;
+      color:rgb(11, 13, 13);
+      padding:aqua;
+      border-radius:20px;
+      font-size:16px;
+      outline:#0b0b0b;
+      cursor:pointer;
+      appearance: none;
+      -webkit-appearance:none;/*For Everything*/
+
+
+    }
+        .dropdown::after{
+          content:;'\28bc';
+          position:absolute;
+          top:50%;
+          right:20px;
+          transform:translateY(-50%);
+          pointer-events:none;
+          color:white;
+        }
+        /*search input styles*/
+        .search-input{
+          border:#111212;
+          padding:15px 18px;
+          margin-left:none;
+          width:min-content350;
+          outline:none;
+        }/*button style*/
+        button{
+          margin-left:5px;
+          padding:3px 9px;
+          background-color:aliceblue
+          color:antiquewhite
+          border:none;
+          border-radius:25px;
+          cursor:pointer;
+          font-size:18px;
+        }
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #0a0b0b;
+      border-radius: 4px;
+      font-size: 16px;
+      appearance: none;
+      background: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 viewBox%3D%270 0 24 24%27 fill%3D%27%23000%27%3E%3Cpath d%3D%27M7 10l5 5 5-5z%27/%3E%3C/svg%3E') no-repeat right 10px center;
+      background-size: 12px;
+      cursor: pointer;
+    }
+
+    .search-input {
+      flex-grow: 1;
+      margin: 0 10px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #090707;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .search-box {
+      padding: 10px 20px;
+      background-color: #1561b1;
+      color: rgb(21, 18, 18);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .search-box:hover {
+      background-color: #0b0b0b;
+    }
+    .search-box input{
+      border:none;
+      outline:none;
+      flex:1;
+
+    }
+      .search-box span{
+        margin-right: 5px;
+        font-size: 18px;
+      }
+    /* Optional Enhancement: Transition Effect */
+    .search-container select,
+    .search-container input,
+    .search-container button {
+      transition: all 0.3s ease;
+    }
+
+    .search-container select:focus,
+    .search-container input:focus {
+      outline: none;
+      border-color: #120b10;
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    }
+
+    button:focus {
+      outline: none;
+    }
+    button:haver{
+      background-color: rgb(2, 2, 2);
+    }
+    button i{
+      margin-left:1%;
+    }
+  
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <!--dropdown-->
+    <div class="dropdown">
+      <select>
+        <option value="everything">Everything</option>
+        <option value="software-development">Software Development</option>
+        <option value="web-development">Web Development</option>
+        <option value="data-analyst">Data Analyst</option>
+        <option value="it-consultant">IT Consultant</option>
+        <option value="network-administrator">Network Administrator</option>
+      </select>
+    </div>
+    <!--Search Input-->
+    <input type="text" class="search-input" placeholder="Search Anything">
+    <!--submit button-->
+    <button type="submit">
+      <i class=""fa-solid fa-magnifying-glass"></i>
+    <span>search</span>
+ 
+  </div>
+</body>
+</html>
+
+
+
+    
